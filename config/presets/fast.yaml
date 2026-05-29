@@ -1,0 +1,16 @@
+# 快速预览预设 — 低分辨率、低步数、最快速度
+generation:
+  duration: 3.0
+  width: 512
+  height: 288
+  fps: 16
+  steps: 4
+  cfg: 1.0
+  preset: fast
+engine:
+  pipeline: distilled
+  fp16: true
+  low_memory: true
+post:
+  upscale: none
+  generate_audio: false

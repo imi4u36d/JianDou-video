@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+*.egg
+.venv/
+venv/
+*.so
+.pytest_cache/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project
+outputs/
+logs/
+*.log
+downloads/
+:memory:
+
+# Secrets
+.env
+.env.local
+*.secret
+
+# SQLite
+*.db
+*.sqlite3
+*.db-shm
+*.db-wal

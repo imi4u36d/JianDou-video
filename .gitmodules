@@ -1,0 +1,3 @@
+[submodule "lib/LTX-2-MLX"]
+	path = lib/LTX-2-MLX
+	url = https://github.com/Acelogic/LTX-2-MLX

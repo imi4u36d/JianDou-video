@@ -1,0 +1,18 @@
+# 高质量预设 — 最高分辨率、最大步数、超分
+generation:
+  duration: 5.0
+  width: 1024
+  height: 576
+  fps: 24
+  steps: 12
+  cfg: 3.0
+  preset: quality
+engine:
+  pipeline: two-stage
+  fp16: false
+  low_memory: false
+post:
+  upscale: both           # PiperSR + 模型内置
+  upscale_factor: 2.0
+  generate_audio: true
+  enhance: true

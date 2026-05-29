@@ -1,0 +1,16 @@
+# 平衡质量预设
+generation:
+  duration: 5.0
+  width: 768
+  height: 512
+  fps: 24
+  steps: 8
+  cfg: 2.0
+  preset: balanced
+engine:
+  pipeline: auto
+  fp16: true
+  low_memory: false
+post:
+  upscale: none
+  generate_audio: false

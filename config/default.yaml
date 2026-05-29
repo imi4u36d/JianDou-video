@@ -1,0 +1,48 @@
+# JianDou-video 默认配置
+# 可通过环境变量 JIAN_DOU_* 覆盖
+
+server:
+  host: "0.0.0.0"
+  port: 6701
+  cors_origins: ["*"]
+  static_dir: "../frontend/dist"
+
+engine:
+  model_version: "2.3"
+  pipeline: auto          # auto | distilled | one-stage | two-stage
+  fp16: true
+  low_memory: false
+
+queue:
+  max_workers: 1          # 默认单 worker，由硬件检测自动调整
+  task_timeout: 3600      # 单个任务超时（秒）
+  idle_timeout: 300       # 常驻模式 idle 超时（秒）
+  resident_mode: false    # 默认关闭常驻模式
+
+generation:
+  duration: 5.0
+  width: 768
+  height: 512
+  fps: 24
+  steps: 8
+  cfg: 2.0
+  seed: -1                # -1 = 随机
+  preset: balanced        # fast | balanced | quality
+
+post:
+  upscale: none           # none | piper | model | both
+  upscale_factor: 2.0
+  generate_audio: false
+  enhance: false
+
+models:
+  cache_dir: "~/.jiandou/models/video"
+  registries:
+    - repo: "Lightricks/LTX-2"
+      files:
+        - "ltx-2.3-22b-distilled-1.1.safetensors"
+        - "ltx-2.3-spatial-upscaler-x2-1.1.safetensors"
+
+paths:
+  outputs: "./outputs"
+  logs: "./logs"
